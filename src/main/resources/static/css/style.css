@@ -55,7 +55,7 @@ body {
 
 .nav {
     display: flex;
-    gap: 40px;
+    gap: 20px; /* reduced from 40px */
 }
 
 .nav-btn {
@@ -105,7 +105,7 @@ body {
     margin: 0 auto;
 }
 
-/* Center About Me ONLY on Home */
+/* Profile Section */
 #home-section.profile-section {
     min-height: calc(100vh - 200px);
     display: flex;
@@ -115,24 +115,24 @@ body {
 
 .profile-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 60px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 30px;
     max-width: 900px;
     margin: 0 auto;
-    padding: 40px;
+    padding: 30px 20px;
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(15px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-/* Profile Picture — solid blue border + soft blue glow only */
+/* Profile Picture */
 .profile-pic {
     width: 180px;
     height: 180px;
     border-radius: 50%;
     border: 4px solid skyblue;
-    background-color: skyblue; /* fills any anti-alias gap */
+    background-color: skyblue;
     box-shadow: 0 0 15px rgba(135, 206, 235, 0.8),
                 0 0 25px rgba(135, 206, 235, 0.6);
     display: flex;
@@ -152,10 +152,10 @@ body {
     display: block;
 }
 
-/* About Me Heading — solid blue, no glow */
+/* About Me */
 .about-content h2 {
     font-size: 2.5rem;
-    margin-bottom: 05px;
+    margin-bottom: 10px;
     color: skyblue;
 }
 
@@ -270,32 +270,34 @@ body {
     margin-top: auto;
 }
 
-/* Responsive */
+/* Responsive - Mobile Only */
 @media (max-width: 768px) {
+    /* Navigation adjustments */
+    .nav {
+        gap: 10px;
+    }
+    .nav-btn {
+        padding: 10px 16px;
+        font-size: 1rem;
+    }
+
+    /* Profile section stacking */
     .profile-container {
         flex-direction: column;
-        gap: 30px;
-        padding: 30px 20px;
+        gap: 20px;
+        padding: 20px;
+        text-align: center;
+    }
+    .about-content p {
+        max-width: 100%;
     }
 
-    .profile-pic {
-        width: 180px;
-        height: 180px;
-        border-radius: 50%;
-        background-color: skyblue;
-        border: 4px solid skyblue !important;
-        box-shadow: 0 0 15px rgba(135, 206, 235, 0.8),
-                    0 0 25px rgba(135, 206, 235, 0.6);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        position: relative;
-        outline: none;
+    /* Anime/Manga grid adjustments */
+    .collections-grid {
+        grid-template-columns: 1fr !important;
+        gap: 15px;
+        padding: 10px 0;
     }
-
-    .profile-pic img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 50%;
+    .collection-card {
+        padding: 20px;
+        border-radius: 15px
