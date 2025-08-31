@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yurachi Collections</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">Yurachi-Collections</h1>
+                <nav class="nav">
+                    <a href="/" class="nav-btn active">Home</a>
+                    <a href="/anime" class="nav-btn">Anime</a>
+                    <a href="/manga" class="nav-btn">Manga</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <!-- Home/Profile Section -->
+            <div id="home-section" class="profile-section">
+                <div class="profile-container">
+                    <div class="profile-pic">
+                        <img src="/images/chabi.jpg" alt="Profile Picture">
+                    </div>
+                    <div class="about-content">
+                        <h2>About Me</h2>
+                        <p>Hello! I'm Yurachi! — 						頭を空っぽにして前に進むために 。
+						Editor | AI Developer | 📧: zukiyurachi0826@gmail.com </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Anime Section -->
+            <div id="anime-section" class="hidden">
+                <div class="collections-grid">
+                    <div class="collection-card">
+                        <div class="collection-image">Anime Cover Image</div>
+                        <div class="collection-title">Saki</div>
+                        <div class="collection-genres">
+                            <span class="collection-genre">Action</span>
+                            <span class="collection-genre">Drama</span>
+                            <span class="collection-genre">Fantasy</span>
+                        </div>
+                    </div>
+                    
+                    <div class="collection-card">
+                        <div class="collection-image">Anime Cover Image</div>
+                        <div class="collection-title">Love live</div>
+                        <div class="collection-genres">
+                            <span class="collection-genre">Action</span>
+                            <span class="collection-genre">Supernatural</span>
+                            <span class="collection-genre">Historical</span>
+                        </div>
+                    </div>
+                    
+                    <div class="collection-card">
+                        <div class="collection-image">Anime Cover Image</div>
+                        <div class="collection-title">Bang Dream</div>
+                        <div class="collection-genres">
+                            <span class="collection-genre">Romance</span>
+                            <span class="collection-genre">Drama</span>
+                            <span class="collection-genre">Supernatural</span>
+                        </div>
+                    </div>
+                    
+                    <div class="collection-card">
+                        <div class="collection-image">Anime Cover Image</div>
+                        <div class="collection-title">Spirited Away</div>
+                        <div class="collection-genres">
+                            <span class="collection-genre">Adventure</span>
+                            <span class="collection-genre">Family</span>
+                            <span class="collection-genre">Fantasy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Manga Section -->
+            <div id="manga-section" class="hidden">
+                <div class="collections-grid">
+                    <div class="collection-card">
+                        <div class="collection-image">Manga Cover Image</div>
+                        <div class="collection-title">One Piece</div>
+                        <div class="collection-genres">
+                            <span class="collection-genre">Adventure</span>
+                            <span class="collection-genre">Comedy</span>
+                            <span class="collection-genre">Drama</span>
+                        </div>
+                    </div>
+                    
+                    <div class="collection-card">
+                        <div class="collection-image">Manga Cover Image</div>
+                        <div class="collection-title">Naruto</div>
+                        <div class="collection-genres">
+                            <span class="collection-genre">Action</span>
+                            <span class="collection-genre">Martial Arts</span>
+                            <span class="collection-genre">Comedy</span>
+                        </div>
+                    </div>
+                    
+                    <div class="collection-card">
+                        <div class="collection-image">Manga Cover Image</div>
+                        <div class="collection-title">Death Note</div>
+                        <div class="collection-genres">
+                            <span class="collection-genre">Thriller</span>
+                            <span class="collection-genre">Psychological</span>
+                            <span class="collection-genre">Supernatural</span>
+                        </div>
+                    </div>
+                    
+                    <div class="collection-card">
+                        <div class="collection-image">Manga Cover Image</div>
+                        <div class="collection-title">Tokyo Ghoul</div>
+                        <div class="collection-genres">
+                            <span class="collection-genre">Action</span>
+                            <span class="collection-genre">Horror</span>
+                            <span class="collection-genre">Dark Fantasy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Yurachi's Anime List</p>
+        </div>
+    </footer>
+
+    <script th:src="@{/js/script.js}"></script>
+</body>
+</html>

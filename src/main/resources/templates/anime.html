@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Anime - Yurachi Collections</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">Yurachi-Collections</h1>
+                <nav class="nav">
+                    <a href="/" class="nav-btn">Home</a>
+                    <a href="/anime" class="nav-btn active">Anime</a>
+                    <a href="/manga" class="nav-btn">Manga</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="collections-grid">
+                <div class="collection-card" th:each="anime : ${animes}">
+                    <div class="collection-image">Anime Cover Image</div>
+                    <div class="collection-title" th:text="${anime.title}">Anime Title</div>
+                    <div class="collection-genres">
+                        <span class="collection-genre" th:each="genre : ${anime.genres}" th:text="${genre}">Genre</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Yurachi's Anime List</p>
+        </div>
+    </footer>
+</body>
+</html>

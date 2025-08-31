@@ -1,0 +1,75 @@
+<!-- This is the start of the project file.
+     It tells Maven: "Hey, I'm a project, and here's how to read me." -->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <!-- This is the version of the POM format.
+         Like saying "I’m using the 4.0.0 rulebook for writing this file." -->
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- This says we are building on top of Spring Boot's ready-made setup.
+         It gives us a bunch of default settings so we don't start from scratch. -->
+    <parent>
+        <!-- "Where to find" Spring Boot's setup -->
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <!-- The version of Spring Boot to use -->
+        <version>3.1.5</version>
+        <!-- Empty means: go get it from the internet if not found locally -->
+        <relativePath/>
+    </parent>
+
+    <!-- This is like giving your project its full name and ID tag -->
+    <groupId>com.yurachi</groupId> <!-- Like your family name in code world -->
+    <artifactId>anime-list</artifactId> <!-- Like your first name in code world -->
+    <version>0.0.1-SNAPSHOT</version> <!-- Version, SNAPSHOT means "still being worked on" -->
+    <name>anime-list-yurachi</name> <!-- Just a friendly name for humans -->
+    <description>Anime-themed Spring Boot website</description> <!-- What this project is about -->
+
+    <!-- Settings that apply to the whole project -->
+    <properties>
+        <!-- This says "We will write code for Java 17" -->
+        <java.version>17</java.version>
+    </properties>
+
+    <!-- Here we list all the 'tools' or 'helpers' our code needs to work -->
+    <dependencies>
+
+        <!-- This helper gives us the power to make websites and APIs.
+             It also brings in Tomcat, which is like a tiny web server inside our app. -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- This helper lets us make HTML pages that can show live data
+             (Server-Side Rendering = backend sends full ready-to-show HTML). -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
+        <!-- This helper has tools for testing code.
+             We only use it when we are running tests, not when people visit the website. -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+    <!-- This part tells Maven how to build and run our project -->
+    <build>
+        <plugins>
+            <!-- This special plugin lets us run Spring Boot with just one command
+                 and also make a .jar file that can run anywhere. -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
